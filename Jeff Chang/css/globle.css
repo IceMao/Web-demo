@@ -1,0 +1,61 @@
+﻿body {
+    font-family:'Palatino Linotype';  font-size:16px; color:#a5a5a5; margin:0; padding:0;
+}
+h1,h2,h3,hr,ul,li,p{margin:0; padding:0;}
+li{list-style:none;}
+img{border:none;}
+a{text-decoration:none; color:#372929;}
+a:visited,a:active{color:#0e0505; cursor:pointer;}
+a:hover{color:#0e0505; cursor:pointer; text-decoration:underline;}
+/* -- */
+.container{margin:0 auto; width:980px; clear:both;}
+header{background-color:#fff; box-shadow:2px 0 10px rgba(0,0,0,0.3);width:100%; height:80px; margin-bottom:30px; position:fixed; top:0; left:0; z-index:333;} 
+header h1{display:inline-block; font-size:40px; line-height:80px;letter-spacing:0.1em; text-transform:uppercase; font-family:'Palatino Linotype';color:cadetblue;}
+nav{margin-top:40px; float:right;}
+nav ul li{float:left; margin-left:20px;}
+nav ul li a{font-size:16px; font-family:'Palatino Linotype'; color:#a5a5a5;}
+nav .active a{color:#0e0505;}
+/*header end*/
+.personalMessage{margin:160px auto 160px; width:720px;}
+section .personalMessage div{width:100%; height:320px; box-shadow: 2px 2px 20px rgba(0,0,0,0.8);}
+section .personalMessage img{width:100%; height:320px;}
+section .personalMessage p{margin-top:50px; float:right; font-size:30px; font-family:"Adobe Caslon Pro";font-weight:bold;}
+section .personalMessage p a{ color:#372929;}
+section .personalMessage p a:hover{ color:#0e0505; text-decoration:none;}
+/* banner end*/
+.basic{margin-bottom:160px; margin-top:100px; height:500px; width:100%;}
+
+.basic .left-col{float:left; margin-left:20px; width:460px;}
+.basic .left-col .basic-title{margin:20px 0; padding-bottom:17px; border-bottom:1px solid #a5a5a5;}
+.basic .left-col .basic-info table tr{display:block; margin:5px 0; font-size:16px; color:#211818;}
+.basic .left-col .basic-info table th{padding:0 12px 0 12px; width:90px; text-align:left;}
+.basic .left-col .basic-info table td{}
+.basic .left-col h2{ font-family:'Palatino Linotype';color:cadetblue;}
+.basic .right-col{box-sizing:border-box; float:right;box-shadow: 2px 2px 20px rgba(0,0,0,0.8); margin-right:20px; width:460px;padding:30px; background:rgba(252, 235, 235, 0.62);}
+.basic .right-col img{max-width:100%;  max-height:100%;box-shadow: 2px 2px 20px rgba(0,0,0,0.8);}
+/*basic end*/
+.song{margin-top:160px; height:300px; width:100%;}
+.song .song-list{width:540px; height:300px;  float:left; }
+.song .song-list .song-title{margin:20px 0; padding-bottom:17px; border-bottom:1px solid #a5a5a5;}
+.song .song-list .song-title h2{font-family:'Palatino Linotype';color:cadetblue;}
+.song .song-list table{padding:5px; font-size:15px; }
+.song .song-list table td{display:inline-block; margin:10px 0 10px 15px ;}
+.song .song-list table .order-number{width:10px;  color:cornflowerblue; }
+.song .song-list table .song-name{width:140px; }
+.song .song-list table .song-album{width:180px;}
+.song .song-list table .song-play .play-img{width:20px; height:20px;cursor:pointer;box-shadow:2px 2px 2px rgba(0,0,0,0.9);  }
+.song .song-list table .song-play .play-img:hover{box-shadow:2px 2px 2px rgba(0,0,0,0.5);}
+.song .song-list table .song-play .play-img:visited,.song .song-list table .song-play .play-img:active{box-shadow:2px 2px 2px rgba(0,0,0,.2);}
+/*song right begin--*/
+.song .song-listen{width:380px; height:300px; float:right;}
+.song .song-listen img{border-radius:100px; margin:40px 0 20px 40px; height:200px; width:200px;box-shadow: 2px 2px 20px rgba(0,0,0,0.8); }
+.song .song-listen audio{margin:20px 0 0 20px;box-shadow: 2px 2px 20px rgba(0,0,0,0.8);}
+/*song end*/
+.album{margin-top:160px; height:600px; width:100%;}
+.album .album-title{margin:20px 0; padding-bottom:17px; border-bottom:1px solid #a5a5a5;}
+.album h2{font-family:'Palatino Linotype';color:cadetblue;}
+.album .album-info {width:100%; height:500px; margin-top:30px;}
+.album .album-info ul li{display:inline-block; box-sizing:border-box; margin:12px; width:30%;float:left; border:1px solid #eee; box-shadow:2px 2px 2px rgba(0,0,0,0.3);}
+.album .album-info ul li img:hover{opacity:0.9;}
+.album .album-info ul li img{width:100px; height:100px; margin:10px; float:left;}
+.album .album-info ul li span{border:1px outset #eee;font-weight:bold; margin-left:30px; width:80px; height:100px; line-height:100px; text-align:center; font-size:16px; color:#0e0505; }
