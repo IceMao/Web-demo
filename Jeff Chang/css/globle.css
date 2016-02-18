@@ -34,7 +34,7 @@ section .personalMessage p a:hover{ color:#0e0505; text-decoration:none;}
 .basic .right-col{box-sizing:border-box; float:right;box-shadow: 2px 2px 20px rgba(0,0,0,0.8); margin-right:20px; width:460px;padding:30px; background:rgba(252, 235, 235, 0.62);}
 .basic .right-col img{max-width:100%;  max-height:100%;box-shadow: 2px 2px 20px rgba(0,0,0,0.8);}
 /*basic end*/
-.song{margin-top:160px; height:300px; width:100%;}
+.song{margin-top:120px; height:300px; width:100%;}
 .song .song-list{width:540px; height:300px;  float:left; }
 .song .song-list .song-title{margin:20px 0; padding-bottom:17px; border-bottom:1px solid #a5a5a5;}
 .song .song-list .song-title h2{font-family:'Palatino Linotype';color:cadetblue;}
@@ -51,11 +51,37 @@ section .personalMessage p a:hover{ color:#0e0505; text-decoration:none;}
 .song .song-listen img{border-radius:100px; margin:40px 0 20px 40px; height:200px; width:200px;box-shadow: 2px 2px 20px rgba(0,0,0,0.8); }
 .song .song-listen audio{margin:20px 0 0 20px;box-shadow: 2px 2px 20px rgba(0,0,0,0.8);}
 /*song end*/
-.album{margin-top:160px; height:600px; width:100%;}
+.album{margin-top:160px; height:500px; width:100%;}
 .album .album-title{margin:20px 0; padding-bottom:17px; border-bottom:1px solid #a5a5a5;}
-.album h2{font-family:'Palatino Linotype';color:cadetblue;}
-.album .album-info {width:100%; height:500px; margin-top:30px;}
+.album h2{display:inline-block; font-family:'Palatino Linotype';color:cadetblue;}
+.album .album-title span{float:right; padding-right:50px;color:#a5a5a5;}
+.album .album-title a span:hover{color:rgba(0,0,0,0.8); text-decoration:underline;}
+
+.album .album-info {width:100%; height:400px; margin-top:30px;}
 .album .album-info ul li{display:inline-block; box-sizing:border-box; margin:12px; width:30%;float:left; border:1px solid #eee; box-shadow:2px 2px 2px rgba(0,0,0,0.3);}
 .album .album-info ul li img:hover{opacity:0.9;}
 .album .album-info ul li img{width:100px; height:100px; margin:10px; float:left;}
 .album .album-info ul li span{border:1px outset #eee;font-weight:bold; margin-left:30px; width:80px; height:100px; line-height:100px; text-align:center; font-size:16px; color:#0e0505; }
+.album .album-info ul li div{margin-top:20px; min-height:200px;}
+.album .album-info ul li p{line-height:25px; display:block; padding:7px; color:rgb(82, 64, 64);font-size:14px;}
+.album .album-info ul li p a{color:#a5a5a5; font-weight:bold;}
+.album .album-info ul li p a:hover{color:cadetblue;}
+/*album end*/
+.active .active-title{margin:20px 0; padding-bottom:17px; border-bottom:1px solid #a5a5a5;}
+.active .active-title h2{display:inline-block; font-family:'Palatino Linotype';color:cadetblue;}
+.active .active-info{margin:50px 0 220px 0; min-height:300px; width:100%;}
+.active .active-info .active-left{display:inline-block; width:300px; min-height:100px; border:1px solid #eee; box-shadow:2px 2px 2px rgba(0,0,0,0.4);}
+.active .active-info .active-left marquee{padding:20px;}
+.active .active-info .active-left marquee h3{padding:5px;font-size: 15px; color:#211818;}
+.active .active-info .active-left marquee p{padding:5px;font-size:14px; color:rgba(0,0,0,0.8);}
+.active .active-info .active-right{display:inline-block; width:500px; margin-right:50px; min-height:200px; float:right; }
+.active .active-info .active-right marquee img{width:150px; height:150px; box-shadow:2px 2px 4px rgba(0,0,0,0.6); margin:10px; border-radius:10px;}
+.active .active-info .active-right marquee{padding:25px;}
+/*active end*/
+.footer{width:100%; height:240px; background-color: rgba(95,158,180,0.7);}
+.footer .content{padding:50px 0 0 50px;}
+.footer .content .content1{display:inline-block; margin:20px 0; width:100px;}
+.footer .content .content1 a img{height:50px; width:50px; border-radius:26px; cursor:pointer;}
+.footer .content .content1 a img:hover{opacity:0.9; }
+.footer .copyright{width:100%; height:30px; text-align:center;}
+.footer .copyright p{line-height:30px; font-size:14px; color:#000;}
