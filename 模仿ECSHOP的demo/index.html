@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ECSHOP-demo</title>
+	<meta charset="utf-8" />
+    <script src="scripts/jquery.min.js" ></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>  
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+<body style="min-height:1200px;">
+    <header class="header">
+        <div class="container">
+            <ul class="header-left">
+                <li><a href="#">电商大会</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">电商学院</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">快报堂</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">官方论坛</a></li>
+            </ul>
+            <ul class="header-right">
+                <li><a href="#">登录</a></li>
+                <li class="spacer"></li>
+                <li><a href="#">注册</a></li>
+                <li class="site-map">
+                    <a href="javascript:;"><i class="glyphicon glyphicon-th-list"></i>网站导航</a>
+                    <div class="categorys" style="height:0; opacity:0; overflow:hidden; display:none;">
+                        <div class="categorys-box categorys-dsxt">
+                            <h3>电商系统</h3>
+                            <ul>
+                                <li><a href="javascript:;">大商创</a></li>
+                                <li><a href="javascript:;">商创O2O</a></li>
+                            </ul>
+                        </div>
+                        <div class="categorys-space"></div>
+                        <!--电商系统 end-->
+                        <div class="categorys-box categorys-mbt">
+                            <h3>模版堂</h3>
+                            <ul>
+                                <li><a href="javascript:;">商业模版</a></li>
+                                <li><a href="javascript:;">免费模版</a></li>
+                                <li><a href="javascript:;">功能插件</a></li>
+                                <li><a href="javascript:;">客户案例</a></li>
+                                <li><a href="javascript:;">周边礼品</a></li>
+                            </ul>
+                        </div>
+                        <div class="categorys-space"></div>
+                        <!--模版堂-->
+                        <div class="categorys-box categorys-wsc">
+                            <h3>微商城</h3>
+                            <ul>
+                                <li><a href="javascript:;">ECTouch微商城</a></li>
+                                <li><a href="javascript:;">ECTouch微分销</a></li>
+                                <li><a href="javascript:;">ECTouch免费开源</a></li>
+                            </ul>
+                        </div>
+                        <div class="categorys-space"></div>
+                        <!--微商城-->
+                        <div class="categorys-box categorys-ysapp">
+                            <h3>原生APP</h3>
+                            <ul>
+                                <li><a href="javascript:;">ECJia尊享版APP</a></li>
+                                <li><a href="javascript:;">ECJia标准版APP</a></li>
+                                <li><a href="javascript:;">ECJia多商户APP</a></li>
+                                <li><a href="javascript:;">ECJia掌柜</a></li>
+                                <li><a href="javascript:;">ECJia智能后台</a></li>
+                            </ul>
+                        </div>
+                        <div class="categorys-space"></div>
+                        <!--原生APP-->
+                        <div class="categorys-box categorys-dssh">
+                            <h3>电商生活</h3>
+                            <ul>
+                                <li><a href="javascript:;">ecshop在线手册</a></li>
+                                <li><a href="javascript:;">模版堂问卷调查</a></li>
+                                <li><a href="javascript:;">大商创在线手册</a></li>
+                            </ul>
+                        </div>
+                        <div class="categorys-space"></div>
+                        <!--电商生活-->
+                        <div class="categorys-box categorys-service">
+                            <h3>相关服务</h3>
+                            <ul class="two-cols">
+                                <li><a href="javascript:;">ecshop授权</a></li>
+                                <li><a href="javascript:;">二次开发</a></li>
+                                <li><a href="javascript:;">logo定制</a></li>
+                                <li><a href="javascript:;">售后延长服务</a></li>
+                            </ul>
+                            <ul class="two-cols two-cols2">
+                                <li><a href="javascript:;">空间域名</a></li>
+                                <li><a href="javascript:;">视觉营销</a></li>
+                                <li><a href="javascript:;">服务器代维</a></li>
+                                <li><a href="javascript:;">一箭多雕</a></li>
+                            </ul>
+                        </div>
+                        <!--相关服务-->
+                    </div>
+                </li>
+                <li class="head-cart">
+                    <a title="查看购物车">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                        <span>购物车</span>
+                        <strong>0</strong>
+                    </a>
+                    <div class=""></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+    <nav class="nav" id="nav-fix">
+        <div class="container">
+            <div class="logo">
+                <a href="javascript:;">
+                    <img src="images/logo.png" alt="ECSHOP logo" />
+                </a>
+            </div>
+            <ul class="nav-head">
+                <li><a href="javascript:;">电商系统</a></li>
+                <li>
+                    <a href="javascript:;">商业模板<i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <div class="box-list" style="overflow:hidden; height:0px; opacity:0; display:block;">
+                        <ul>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg1.png" />
+                                    </div>
+                                    <p>ecshop模板</p>
+                                </a>
+                            </li>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg2.png" />
+                                    </div>
+                                    <p>大商创模板</p>
+                                </a>
+                            </li>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg3.png" />
+                                    </div>
+                                    <p>ECTouch模板</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+    
+                <li><a href="javascript:;">免费模板</a></li>
+                <li><a href="javascript:;">插件区<i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <div class="box-list" style="overflow:hidden; height:0px; opacity:0; display:block;">
+                        <ul>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg4.png" />
+                                    </div>
+                                    <p>大商创插件</p>
+                                </a>
+                            </li>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg5.png" />
+                                    </div>
+                                    <p>ECTouch插件</p>
+                                </a>
+                            </li>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg6.png" />
+                                    </div>
+                                    <p>ECJia插件</p>
+                                </a>
+                            </li>
+                            <li class="list-first">
+                                <a href="#">
+                                    <div>
+                                        <img alt="ecshop模板" src="images/sublistimg7.png" />
+                                    </div>
+                                    <p>ecshop插件</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:;">手机端</a></li>
+            </ul>
+            <form class="search-product">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="text" placeholder="请输入关键字搜索" style="" />
+            </form>
+        </div>
+    </nav>
+    <!--nav end-->
+    <div class="content" style="min-height:1000px; width:100%; background:#eee;">
+        <div class="place">
+            您现在的位置：
+            <a href="javascript:;">首页</a>
+            <code>></code>
+            <a href="javascript:;">ECSHOP</a>
+            <code>></code>
+            <a href="javascript:;">ECSHOP功能插件</a>
+        </div>
+        <div class="slide">
+            <div class="slide-content" style="left:0px;">
+                <h3>
+                    ECSHOP功能插件
+                    <span class="hide-btn">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                    </span>
+                </h3>
+                <div class="slide-item">
+                    <dl class="item-dl">
+                        <dt class="item-dt"><i class="glyphicon glyphicon-chevron-down"></i><b>分类</b></dt>
+                        <dd class="item-dd" style="display:block;">
+                            <a class="item-active" href="javascript:;">全部</a>
+                            <a href="javascript:;">收费插件</a>
+                            <a href="javascript:;">免费插件</a>
+                            <a href="javascript:;">手机端插件</a>
+                        </dd>
+                    </dl>
+                    <dl class="item-dl">
+                        <dt class="item-dt "><i class="glyphicon glyphicon-chevron-down"></i><b>类型</b></dt>
+                        <dd class="item-dd" style="display:block;">
+                            <a class="item-active" href="javascript:;">全部</a>
+                            <a href="javascript:;">在线客服</a>
+                            <a href="javascript:;">常用工具</a>
+                            <a href="javascript:;">手机客户端</a>
+                        </dd>
+                    </dl>
+                    <dl class="item-dl"  style="margin-bottom:0;">
+                        <dt class="item-dt"><i class="glyphicon glyphicon-chevron-down"></i><b>价格</b></dt>
+                        <dd class="item-dd" style="display:block;">
+                            <ul>
+                                <li>
+                                    <a class="item-active" href="javascript:;">全部</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">0&nbsp;-&nbsp;3000</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">3000&nbsp;-&nbsp;6000</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">6000&nbsp;-&nbsp;9000</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">9000&nbsp;-&nbsp;12000</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">18000&nbsp;-&nbsp;21000</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="item-dl" style="margin-bottom:0;">
+                        <dt class="item-dt"><b>你可能还喜欢</b></dt>           
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="content-r" style="left:0px; width:auto;">
+            <div class="sort">
+                <span style="margin-left:45px; float:left; font-size:12px; padding-top:5px;">排序：</span>
+                <span>
+                    <a class="sort-active" href="javascript:;">综合</a>
+                    <a href="javascript:;">新品</a>
+                    <a href="javascript:;">价格</a>
+                    <a href="javascript:;">热评</a>
+                    <a href="javascript:;">热销</a>
+                </span>
+                <div class="totals">
+                    共找到<i>115</i>款产品
+                </div>
+            </div>
+            <form>
+                <div class="boutique">
+                    <ul class="items">
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                        <li class="items-li">
+                            <a href="javascript:;">
+                                <img src="images/1.png" />
+                            </a>
+                            <div class="wrap-div">
+                                <div>
+                                    <b class="title">
+                                        <a href="javascript:;"> ECSHOP模版堂钻石小鸟最新简洁版</a>
+                                    </b>
+                                    <span class="description">
+                                        <a href="javascript:;">ECSHOP免费模版</a>-
+                                        <a href="javascript:;">珠宝饰品</a>
+                                    </span>
+                                    <p style="margin-top:5px; overflow:hidden; height:0;">海量模版不断更新</p>
+                                </div>
+                            </div>
+                            <p class="price-attente">
+                                <span class="price">￥0元</span>
+                                <span class="attente" title="浏览量">756</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="clear:both;"></div>
+            </form>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <!--content end-->
+    <footer class="footer">
+        <p class="subnav">
+            <a href="http://www.ecmoban.com"><strong>模版堂（THANKS）</strong></a>
+            <a href="#">联系我们</a>
+            <a href="#">公司简介</a>
+            <a href="#">支付方式</a>
+            <a href="#">法律条款</a>
+            <a href="#">合作代理</a>
+            <a href="#">友情链接</a>
+            <a href="#">诚聘英才</a>
+            <a href="#">服务支持</a>
+        </p>
+        <p class="copyright">模仿--&copy; 2005-2016 ecshop模板堂(ecmoban.com) 版权所有，并保留所有权利。常年法律顾问:<a class="copyright" href="#">上海华宏律师事务所</a></p>
+        <p class="address">上海市普陀区中山北路3553号伸大厦3层</p>
+    </footer>
+    <!--footer end-->
+    <div class="suspension">
+        <div class="suspension-box">
+            <a class="tel">
+                <i class="glyphicon glyphicon-earphone"></i>
+            </a>
+            <a class="code">
+                <i class="glyphicon glyphicon-qrcode"></i>
+            </a>
+            <a id="top" class="top" style="display:block;">
+                <i class="glyphicon glyphicon-chevron-up"></i>
+            </a>
+            <div class="tel-box">
+                <strong>服务热线：</strong>
+                <p>400 123 567</p>
+                <i></i>
+            </div>
+            <div class="code-box">
+                <img src="http://www.ecmoban.com/content/themes/ecmoban2014/images/suspension-code.png" />
+                <p>扫一扫，微信关注模版堂</p>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <!--右侧固定 end-->
+    <div class="clr"></div>
+    <script>
+        $(".hide-btn").click(function () {
+            var s = $(".slide-content");
+            var r = $(".content-r");
+            if(s.css("left") == '0px'){
+                s.animate({ left: "-300px" }, "solw");
+                r.animate({ left: "-300px"}, "solw").css("width", "100%");
+            }else{
+                s.animate({ left: "0px" }, "solw");
+                r.animate({ left: "0px"}, "solw").css("width","auto");
+            }
+        });
+    </script>
+    
+</body>
+</html>
