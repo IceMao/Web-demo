@@ -1,0 +1,56 @@
+﻿body,ul,li,ol,h1,h2,h3,img,p,span{margin:0; padding:0;box-sizing:border-box;}
+li{list-style: none;}
+a,a:hover,a:active,a:visited{text-decoration: none;}
+/*.container{width:1107px; margin:0 auto;}*/
+#header{height:160px; width:100%; background:#218CEB;
+        background: -webkit-linear-gradient(top left,#1F63FC 50%,#4B35FF 100%);
+        background: linear-gradient(to top right,#365DFF 0%, #30E4E8 100%); }
+#header .title{height:160px;width:400px; display:inline-block;}
+#header .title h1{font-size:3em;margin-left:80px; margin-top:20px; line-height: 100px;text-align: left;  color:#fff;}
+#header .pic{position:relative; margin-right:26px;height:120px; width:650px;display: inline-block; float:right; margin-top:40px;}
+#header .pic>ul{ width:650px; position:absolute; left:0;}
+#header .pic>ul>li {float:left; margin-right:10px;}
+#header .pic>ul>li>img{display: inline-block; height:120px; width:120px; background:#00A388;}
+/*main*/
+/*#main {width: 100%; min-height: 500px; background:gray; position: relative;overflow:hidden;margin:0;}*/
+.aside4{width:30%;}
+.content8{width:70%;}
+#aside {min-height:500px; 
+        background:#218CEB;
+        background: -webkit-linear-gradient(top left,#365fff 100%,#1F63FC 0%);
+        background: linear-gradient(to top left,#365fff 10%, #1F63FC 100%);}
+#aside .leftside {background:#ECDEF2; border-top-left-radius: 20px;  height:777px; margin-left:30px; padding-bottom:30px; border-bottom-left-radius: 20px; border-left:1px solid #23d;}
+#aside .leftside>h3{ height:36px; line-height: 36px; font-size: 20px; margin-left:15px; padding-top:10px; padding-bottom:40px; color:green;}
+#aside .leftside .select{margin-left:10px;}
+#aside .leftside .select>div{float:left; width:100px;  height:36px;}
+#aside .leftside .select>div>a{display:block; width:100%; height:36px;color:#fff; text-align:center; font-size:16px; line-height:36px;background: #4998f3; }
+#aside .leftside .select>div>a:hover{background:#FFFF9D;}
+#aside .leftside .list{margin-top:36px; margin-left:10px; border-top:1px solid #ddd; padding-top:20px;}
+#aside .leftside .list li{margin-bottom:10px; width: 270px; height:150px; position:relative; }
+#aside .leftside .list li>img{width:150px; height:150px; background:#FF6138; display: inline-block;margin-right:5px;}
+#aside .leftside .list li .msg{display: inline-block;float: right; width:110px; height: 100px;}
+#aside .leftside .list li .msg p{font-size: 14px; color:red; margin:2px 0; }
+#aside .leftside .list li .msg p>span,#aside .leftside .list li .msg span{color:#065; font-size: 13px; font-weight: 600;}
+
+#aside .leftside .list1{display:none; margin-top:36px; margin-left:10px; border-top:1px solid #ddd; padding-top:20px;}
+#aside .leftside .list1 li{margin-bottom:10px; width: 256px; height:150px; }
+#aside .leftside .list1 li>img{width:150px; height:150px; background:yellow; display: inline-block;margin-right:5px;}
+#aside .leftside .list1 li .msg{display: inline-block;float: right; width:100px; height: 100px;}
+#aside .leftside .list1 li .msg p{font-size: 14px; color:red; margin:2px 0; }
+#aside .leftside .list1 li .msg p>span{color:#065; font-size: 14px; font-weight: 600;}
+
+#content {overflow:hidden; background: #fff; height:777px;border-right: 36px solid #33a0f4}
+#content .pageUp{ color:#111; text-align:center; height:56px; font-size:16px; line-height:56px; width:100%; margin-bottom:20px;}
+#content .pageDown{position:absolute;bottom:0; color:#111; text-align:center; height:56px; font-size:16px; line-height:56px; width:753px;}
+#content .pageDown{}
+#content>ul{ margin-left:20px;}
+#content>ul>li{padding:10px 15px;float:left; width:30%; height:300px; background:#ECDEF2; margin-right:20px; margin-bottom:20px;}
+#content>ul>li>img{display: inline-block; width:200px; height:200px; background:#79BD8F; margin-bottom:4px; }
+#content>ul>li>p{font-size:14px; color:#111; margin: 2px ; }
+#content>ul>li>p>span{font-weight: 600; color:#222; margin:3px;}
+
+#footer{height:70px; width:100%; background:#218CEB;
+        background: -webkit-linear-gradient(top left,#30E4E8 0%,#365DFF 100%);
+        background: linear-gradient(to top left,#30E4E8 0%, #365DFF 100%);}
+#footer>p{font-size: 16px; color:#fff; line-height: 70px; text-align: center; }
+#footer>p a{font-size: 16px; color:#eee; line-height: 70px; margin-left: 20px;}

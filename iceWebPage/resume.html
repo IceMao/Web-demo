@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>文章</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/font-awesome.min.css" />
+    <link rel="stylesheet" href="style/Style.css" />
+    <link rel="stylesheet" href="style/article.css" />
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body class="index">
+    <nav class="index-nav" style="position:fixed;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <span class="nav-toggle-button collapse" data-toggle="collapse" data-target="#index-nav">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="icon-adjust"></i>
+                        </span>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="menu">
+                            <li class="nav-current">
+                                <a href="Index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="Articles.html">Articles</a>
+                            </li>
+                            <li>
+                                <a href="#">Works</a>
+                            </li>
+                            <li>
+                                <a href="resume.html">Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </nav>
+    <!--nav end-->
+    <aside class="right-side" id="rightSide">
+        <div class="shadow1">
+            <i><em></em><span></span></i>
+        </div>
+        <div class="shadow1">
+            <i><em></em><span></span></i>
+        </div>
+    </aside>
+    <!--right side end-->
+    <aside class="left-side" id="leftSide">
+        <article>
+            <section class="left-side-sec">
+                <content>
+                    <h1>hello world</h1>
+                </content>
+                <em style="position:absolute; left:500px; top:0px; display:block; width:20px; height:80px;background:#3f6; border:1px solid #eee;">分享到&middot;</em>
+            </section>
+            <section class="left-side-sec">
+                <content>
+                    <h1>hello world</h1>
+                </content>
+                <em style="position:absolute; left:500px; top:80px; display:block; width:20px; height:80px;background:#3f6; border:1px solid #eee;">分享到&middot;</em>
+            </section>
+        </article>
+        
+    </aside>
+    <!--left side end-->
+    <script>
+        window.onload = function () {
+            var oLeft = document.getElementsByClassName("left-side-sec");
+            for (var i = 0, len = oLeft.length; i < len; i++) {
+                oLeft[i].onmouseover = function () {
+                    doMove(this, "left", 10, 0);
+                };
+                oLeft[i].onmouseout = function () {
+                    doMove(this, "left", 10, -500);
+                };
+            }
+        };
+        function doMove(obj, attr, dir, target, endFn) {
+            var pos = parseInt(getStyle(obj, attr));
+            dir = pos > target ? -dir : dir;
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (pos <= target && dir < 0 || pos >= target && dir > 0) {
+                    pos = target;
+                    obj.style[attr] = pos + "px";
+                    clearInterval(obj.timer);
+                    endFn && endFn();
+                } else {
+                    pos = dir + pos;
+                    obj.style[attr] = pos+"px";
+                }
+            },30);
+        };
+        function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+        }
+</script>
+    <!--left side end-->
+    <script>
+        window.onscroll = function () {
+            var oLine = document.getElementById("line");
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var topT = scrollTop + (document.documentElement.clientHeight - oLine.offsetHeight) / 2 +"px";
+            startMove(parseInt(topT));
+        };
+        var timer = null;
+        function startMove(iTarget) {
+            var oLine = document.getElementById("line");
+            clearInterval(timer);
+            timer = setInterval(function () {
+                var iSpeed = (iTarget - oLine.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                if (oLine.offsetTop == iTarget) {
+                    clearInterval(timer);
+                } else {
+                    oLine.style.top = oLine.offsetTop + iSpeed + "px";
+                }
+            },30);
+        }
+    </script>
+    <!--right side end-->
+</body>
+</html>

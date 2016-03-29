@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/jquery.min.js"></script>
+    <style>
+        *{margin:0; padding:0; list-style:none; box-sizing:border-box;}
+
+        .main{position:relative; overflow:hidden; width:300px; height:200px; background:#ddc644; border:1px solid #1ee;}
+        .main>ul{position:relative; z-index:1;}
+        .main>ul>li{position:absolute; left:0; top:0; float:left; background:#c19f63;width:300px; height:200px; border:1px solid #ff0000;}
+        h1{font-size:50px; line-height:200px; text-align:center; color:#ff6a00; font-family:'Adobe Caslon Pro';}
+        ol{position:absolute; bottom:5px; right:5px; z-index:2; }
+        ol>li{ cursor:pointer;margin-top:10px; float:left; margin-left:3px; height:20px; width:20px; text-align:center; line-height:20px; background:#1ee; border:1px solid #ff0000;}
+        .current{ margin-top:0px; width:30px; height:30px; background:#f60; color:#fff; border:1px solid #f60; text-align:center; line-height:30px;}
+        .imgUl{width:480px; height:360px; background:#444;}
+        .imgUl>li{display:inline-block; background:#fff; float:left; margin:10px 10px; width:140px; height:140px; font-size:50px; color:#ff0000; line-height:140px; text-align:center;}
+        /*taobao*/
+        .taobao{margin:200px;}
+        .taobao>li{padding:0 5px; border:1px solid #1ee; background:#c19f63; width:100px; height:35px; line-height:35px;}
+        .taobao>li>a{text-decoration:none; color:#ffe; margin: 0 5px; float:left;}
+        .taobao i{transition:transform ease-in 0.3s 0s; position:relative; display:block; height:8px; width:8px; background:transparent; float:right; margin:15px 0; }
+        em,span{border-width:4px; border-style:solid dashed dashed dashed; border-color:transparent; width:0px; height:0px;}
+        .taobao em{position:absolute;border-top-color:#ff0000; z-index:5;} 
+        .taobao span{position:absolute; top:-2px;  border-top-color:#c19f63; z-index:6;}/*在上*/
+        .taobao>li:hover i{ transform:rotate(-180deg);}
+        /*circle begin*/
+        .circle{height:100px; width:100px; background:#f60; margin:100px; transition:border-radius ease-in-out 0.3s;  }
+        .circle:hover{border-radius:50% 50%;}
+        /*shadow begin*/
+        .shadow1{transition:box-shadow 0.3s ease-in-out; margin:100px; height:50px; width:50px; border-radius:50%; background:#fff; box-shadow:0 0 0px 2px #2c9246 inset; }
+        .shadow1:hover{box-shadow:0 0 0px 25px #3f6 inset;} 
+        .shadow1:hover span{border-top-color:#3f6; }
+        .shadow1:hover em{border-top-color:#fff;}
+        .shadow1:hover i {transform:rotate(180deg); -moz-transform:rotate(180px); -webkit-transform:rotate(180px); -ms-transform:rotate(180px);}
+        .shadow1 i{ -moz-transition:transform 0.3s ease-in; transition:transform 0.3s ease-in;-webkit-transition:transform 0.3s ease-in; display:block; position:relative; top:15px; left:15px; width:20px; height:20px; line-height:20px; background:transparent;}
+        .shadow1 em,.shadow1 span{width:0; height:0; border-style:solid dashed dashed dashed; border-color:transparent; border-width:10px;}
+        .shadow1 em{position:absolute;top:5px; border-top-color:#2c9246;transition:border-top-color 0.3s ease-in-out;}
+        .shadow1 span{position:absolute; top:0px; border-top-color:#fff; transition:border-top-color 0.3s ease-in-out; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li>
+                <h1>First</h1>
+            </li>
+            <li>
+                <h1>Second</h1>
+            </li>
+            <li>
+                <h1>Three</h1>
+            </li>
+        </ul>
+        <ol>
+            <li>！</li>
+            <li>@</li>
+            <li class="current">#</li>
+        </ol>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var num = 6;
+            $("ol>li").mouseover(function () {
+                $(this).attr('class', 'current').siblings().removeClass("current");//或者 attr('class','');为空。
+                num++;
+                var n = $(this).index();
+                $("ul>li").eq(n).css("z-index",num);
+                $("ul>li").eq(n).css({left:"300px"}).animate({
+                    left: "0px"
+                },1000);
+            });
+        });
+    </script>
+    <div class="img" style="width:520px; height:400px; border:2px solid #3f6; padding:20px;">
+        <ul class="imgUl">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".imgUl>li").hover(function () {
+                $(this).siblings().stop(true,false).fadeTo(500,0.3);
+            }, function () {
+                $(".imgUl>li").stop().fadeTo(500, 1);
+            });
+        });
+    </script>
+    <ul class="taobao">
+        <li><a href="/">我的淘宝</a><i><em></em><span></span></i></li>
+    </ul>
+    <!--taobao end-->
+    <div class="circle"></div>
+    <!--shadow-->
+    <div class="shadow1">
+        <i><em></em><span></span></i>
+    </div>
+    <!--分享到-->
+    <div id="share" style="z-index:500; position:absolute; left:-200px; top:50px; width:200px; height:200px; background:#f60; ">
+        <em style="position:absolute; left:200px; top:60px; display:block; width:20px; height:80px;background:#3f6; border:1px solid #eee;">分享到&middot;</em>
+    </div>
+    <div id="shareR" style="z-index:500; position:absolute; right:-200px; top:50px; width:200px; height:200px; background:#2c9246; ">
+        <em style="position:absolute; right:200px; top:60px; display:block; width:20px; height:80px;background:#3f6; border:1px solid #eee;">分享到&middot;</em>
+    </div>
+    <script>
+        window.onload = function () {
+            var oShare = document.getElementById("share");
+            var oShareR = document.getElementById("shareR");
+            oShare.onmouseover = function () {
+                doMove(oShare, "left", 10, 0);
+            };
+            oShare.onmouseout = function () {
+                doMove(oShare, "left", 10, -200);
+            };
+            oShareR.onmouseover = function () {
+                doMove(oShareR, "right", 10, 0);
+            };
+            oShareR.onmouseout = function () {
+                doMove(oShareR, "right", 10, -200);
+            };
+        };
+        function doMove(obj, attr, dir, target, endFn) {
+            var pos = parseInt(getStyle(obj, attr));
+            dir = pos > target ? -dir : dir;
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (pos <= target && dir < 0 || pos >= target && dir > 0) {
+                    pos = target;
+                    obj.style[attr] = pos + "px";
+                    clearInterval(obj.timer);
+                    endFn && endFn();
+                } else {
+                    pos = dir + pos;
+                    obj.style[attr] = pos+"px";
+                }
+            },30);
+        };
+        function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+        }
+    </script>
+    <!--图片淡入淡出-->
+    <img src="images/3.png" title="图片淡入淡出" width="128" height="128" id="img1" style="position:absolute; top:20px; right:300px; z-index:450; filter:alpha(opacity:30); opacity:0.3;" />
+    <input id="imgBtn" type="button" value="图片移动" style="position:absolute; top:0; right:200px;" />
+    <script>
+        
+            var oImg = document.getElementById("img1");
+            var oImgBtn = document.getElementById("imgBtn");
+            oImg.onmouseover = function () {
+                getOpacity(oImg, 30, 10, 100);
+                
+            }
+            oImg.onmouseout = function () {
+                getOpacity(oImg, 100, 10, 30);
+            }
+            oImgBtn.onclick = function () {
+                easeMove(oImg, "top", 15, 200);
+            };
+            function easeMove(obj, attr, dir, target) {
+                var pos = parseInt(obj.style[attr]);
+                dir = pos > target ? -dir : dir;
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function () {
+                    if (pos >= target && dir>0 || pos <= target && dir<0) {
+                        console.log(obj.offsetTop);
+                        clearInterval(obj.timer);
+                    } else {
+                        
+                        pos = pos + dir;
+                        alert(pos);
+                        obj.style[attr] = obj.offsetTop + "px";
+                        console.log(obj.style.top);
+                    }
+                });
+            }
+            function getOpacity(obj,alpha,dir,target,endFn) {
+                alpha = alpha <= 1 ? alpha * 100 : alpha;
+                dir = alpha < target ? dir : -dir;
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function () {
+                    
+                    if (alpha >= target && dir>0 || alpha<=target && dir<0) {
+                        clearInterval(obj.timer);
+                        endFn && endFn();
+                    } else {
+                        alpha = dir + alpha;
+                        obj.style.opacity = alpha / 100;
+                        obj.style.filter = 'alpha(opacity:' + alpha + ')';
+                        
+                    }
+                }, 30);
+              };
+    </script>
+    
+</body>
+</html>

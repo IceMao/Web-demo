@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <input id="btn1" type="button" value="读取文件" />
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById("btn1");
+            oBtn.onclick = function () {
+                //创建ajax 对象.ie6不兼容
+               /* var oAjax = new XMLHttpRequest();
+                alert(oAjax);
+                //ie6用
+                var oAjax = new ActiveXObject("Microsoft.XMLHttp");
+                */
+                //解决:因为在ie6下没有定义的变量会报错，其他的浏览器是undefiend。
+                //但是如果未定义的变量前加上window.变量 就会变成undefiend
+                var oAjax = null;
+                if (window.XMLHttpRequest) {
+                    oAjax = new XMLHttpRequest();
+                } else {
+                    oAjax = new ActiveXObject("Microsoft.XMLHttp");//创建插件
+                }
+                //2.连接服务器
+                //open(方法，url，是否异步)
+                oAjax.open('GET', 'abc.txt', true);
+                //3.发送请求
+                oAjax.send();
+                //4.接受返回信息 onReadyStateChange
+                oAjax.onreadystatechange = function () {
+                    //alert(oAjax.readyState);
+                    //==4 表示完成，不代表是否成功
+                    if (oAjax.readyState == 4) {//请求状态0-4 
+                        if (oAjax.status == 200) {//请求结果，弹出200表示成功，弹出404表示没有找到文件
+                            alert(oAjax.responseText);//显示文件内容
+                        } else {
+                            alert("文件不存在，读取失败");
+                        }
+                    }
+                }
+            };
+        };
+    </script>
+</body>
+</html>
